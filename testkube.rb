@@ -11,7 +11,7 @@ class Testkube < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kubeshop/testkube/releases/download/v0.7.3/testkube_0.7.3_macOS_arm64.tar.gz"
-      sha256 "761ee077a42230fc5a25c65faf3d8c19c7fdd57f996cf6236dfe78a7e6a4d7a7"
+      sha256 "0b654da85509938421c30f036e37473ccb9f9addb89e23f14777b5312aa4af9e"
 
       def install
         bin.install "kubectl-testkube"
@@ -19,7 +19,7 @@ class Testkube < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubeshop/testkube/releases/download/v0.7.3/testkube_0.7.3_macOS_x86_64.tar.gz"
-      sha256 "37546e6325e3a2ada79b292c93b5f89728c570dbe0ad18627cc72b466a31099a"
+      sha256 "15a881c127b521df7f627efac6fb0702b12556ef54c05a48051962dd05808d12"
 
       def install
         bin.install "kubectl-testkube"
@@ -30,7 +30,7 @@ class Testkube < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeshop/testkube/releases/download/v0.7.3/testkube_0.7.3_Linux_arm64.tar.gz"
-      sha256 "05d5a6792fa3cd05317a400aa0ff1daba075770f9b018444287988017646ba03"
+      sha256 "1f6533d274e465f95256852a257e14f13167b37f27b4321648348c4920c8a8f9"
 
       def install
         bin.install "kubectl-testkube"
@@ -38,7 +38,7 @@ class Testkube < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubeshop/testkube/releases/download/v0.7.3/testkube_0.7.3_Linux_x86_64.tar.gz"
-      sha256 "d037ed8acb391264de4762f315a3a23a7deaad854a54bc19fc120c9c6cc963da"
+      sha256 "6265f93f193727f67a3cf71fc98f8606c73dd2a1a6dd777a2bd032f0ce10bc6f"
 
       def install
         bin.install "kubectl-testkube"
