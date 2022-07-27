@@ -5,21 +5,21 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "1.3.43"
+  version "1.3.44"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.3.43/testkube_1.3.43_macOS_arm64.tar.gz"
-      sha256 "2691ea31bf9eb366182a5b67abbfd903717073b2390383b8cd6067593d1c004e"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.44/testkube_1.3.44_macOS_x86_64.tar.gz"
+      sha256 "52c577ef6e82446de878fe5e242b5bfc02abd72f650cbbe3e080d314dd714939"
 
       def install
         bin.install "kubectl-testkube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.3.43/testkube_1.3.43_macOS_x86_64.tar.gz"
-      sha256 "0e2414cbf518fee790912262353fbec652c5ffa16ca97df4da63d4fe780c77b9"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.44/testkube_1.3.44_macOS_arm64.tar.gz"
+      sha256 "640049015e4606c6d402153bf822f61a103813caffe74cd853e1fccd3644c001"
 
       def install
         bin.install "kubectl-testkube"
@@ -28,17 +28,17 @@ class Testkube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.3.43/testkube_1.3.43_Linux_arm64.tar.gz"
-      sha256 "9ec5c524385acf9b9b01345964b0c0795ca949f1fe34112d45016473eb3171a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.44/testkube_1.3.44_Linux_x86_64.tar.gz"
+      sha256 "2dc10bda1aa723c0d2d36c55a74a8b9dd4d5af46c8fdd0aaf2f80d1a912160e3"
 
       def install
         bin.install "kubectl-testkube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.3.43/testkube_1.3.43_Linux_x86_64.tar.gz"
-      sha256 "1fcd061e9208f08712d658b534f05ce9143cf1eadbb269d6e31e6a679cff07fa"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.44/testkube_1.3.44_Linux_arm64.tar.gz"
+      sha256 "c90f9107dc734b94339fd42c6970f7c8bc391507eb5c8189e404ca4891b55d7f"
 
       def install
         bin.install "kubectl-testkube"
