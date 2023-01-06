@@ -5,16 +5,16 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "1.8.17"
+  version "1.8.18"
   license "MIT"
 
   depends_on "helm"
   depends_on "kubectl"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.8.17/testkube_1.8.17_macOS_x86_64.tar.gz"
-      sha256 "ae0d1a22ec2375cfc0bae3d34867753cf1ec634bdedb6e4cb1db2d372f6b01c8"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.8.18/testkube_1.8.18_macOS_arm64.tar.gz"
+      sha256 "e576ae39a0646ba8cbdd485cf58efed4ca89944f3ba985cf1a1b1b4e88edb8fe"
 
       def install
         bin.install "kubectl-testkube"
@@ -22,9 +22,9 @@ class Testkube < Formula
         ln_s bin/"kubectl-testkube", bin/"testkube"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.8.17/testkube_1.8.17_macOS_arm64.tar.gz"
-      sha256 "fbac5e6f40e8a56cc13340ae97f8490f8396cf57c8aff4dff7f72c1c1d70cbcb"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.8.18/testkube_1.8.18_macOS_x86_64.tar.gz"
+      sha256 "e5beb7cef9dda40a1d504c729554fa3ae6403b497d52fab9c172aeaca01015f9"
 
       def install
         bin.install "kubectl-testkube"
@@ -35,9 +35,9 @@ class Testkube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.8.17/testkube_1.8.17_Linux_arm64.tar.gz"
-      sha256 "eb986f77a89de7936cd5f9eed65219b368ac2cfbe549d5e11b6c82d343790ab8"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.8.18/testkube_1.8.18_Linux_x86_64.tar.gz"
+      sha256 "a384a3762649ec8bf80b48f0166f7e58dc545621b5f1c789ec01d4637dbffc00"
 
       def install
         bin.install "kubectl-testkube"
@@ -45,9 +45,9 @@ class Testkube < Formula
         ln_s bin/"kubectl-testkube", bin/"testkube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.8.17/testkube_1.8.17_Linux_x86_64.tar.gz"
-      sha256 "6cdec31fa54d2a6f1fc6703d27709cdccc9362ccc9f5206d69efe3cf984e84b7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.8.18/testkube_1.8.18_Linux_arm64.tar.gz"
+      sha256 "cee86b95ca674a619613d504b5b710e156632d76b583a847bee8c0007ef7ec51"
 
       def install
         bin.install "kubectl-testkube"
