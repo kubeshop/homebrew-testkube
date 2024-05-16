@@ -5,7 +5,7 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "1.17.32"
+  version "1.17.33"
   license "MIT"
 
   depends_on "helm"
@@ -13,8 +13,8 @@ class Testkube < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/kubeshop/testkube/releases/download/v1.17.32/testkube_1.17.32_Darwin_x86_64.tar.gz"
-      sha256 "55f132c2a5c36927e47391a17659d5c2d3b1a7ff54e77b4b7803453b01b703e3"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.17.33/testkube_1.17.33_Darwin_x86_64.tar.gz"
+      sha256 "f334585152fc4930604a56914abe84ad30c71c12fa354f77c492e2d33716bcfa"
 
       def install
         bin.install "kubectl-testkube"
@@ -23,8 +23,8 @@ class Testkube < Formula
       end
     end
     on_arm do
-      url "https://github.com/kubeshop/testkube/releases/download/v1.17.32/testkube_1.17.32_Darwin_arm64.tar.gz"
-      sha256 "87a7dbf7cea6fe3fc144e284633e9c305b81ca8bdab410702fd790e2a4e069a0"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.17.33/testkube_1.17.33_Darwin_arm64.tar.gz"
+      sha256 "c443b6582d7c022fda0f752e201c0842be38e7a505efbefa450fa580149443c0"
 
       def install
         bin.install "kubectl-testkube"
@@ -37,8 +37,8 @@ class Testkube < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubeshop/testkube/releases/download/v1.17.32/testkube_1.17.32_Linux_x86_64.tar.gz"
-        sha256 "2d7a1f0e0c876a6b91093b209d5b37fe5785359b2b3693d15fe4266d95af6fc2"
+        url "https://github.com/kubeshop/testkube/releases/download/v1.17.33/testkube_1.17.33_Linux_x86_64.tar.gz"
+        sha256 "bc387cee2c15d7f70d151ab201c90af127444aa817ee843505557ec081bda91c"
 
         def install
           bin.install "kubectl-testkube"
@@ -49,8 +49,8 @@ class Testkube < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubeshop/testkube/releases/download/v1.17.32/testkube_1.17.32_Linux_arm64.tar.gz"
-        sha256 "94e47e45cbe3bc36efc96d02a8e28759ec14d32647373512d4351936c34d74f0"
+        url "https://github.com/kubeshop/testkube/releases/download/v1.17.33/testkube_1.17.33_Linux_arm64.tar.gz"
+        sha256 "ddaef745ed1f3b4c1eba8240a0ef4f267cbfd783c2e7a75ab410011b3c9bf306"
 
         def install
           bin.install "kubectl-testkube"
