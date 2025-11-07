@@ -14,7 +14,7 @@ class Testkube < Formula
   on_macos do
     on_intel do
       url "https://github.com/kubeshop/testkube/releases/download/2.4.0/testkube_2.4.0_Darwin_x86_64.tar.gz"
-      sha256 "8f3cfc1ed3cbad447ca9a5b65769309528a2653e247db0809f09cc2aa0878a3a"
+      sha256 "83d59aa44665d7639abb9be7dfd220b5d990de149908786f4c192d3a6ad405ec"
 
       def install
         bin.install "kubectl-testkube"
@@ -24,7 +24,7 @@ class Testkube < Formula
     end
     on_arm do
       url "https://github.com/kubeshop/testkube/releases/download/2.4.0/testkube_2.4.0_Darwin_arm64.tar.gz"
-      sha256 "1817acbf1431927caeab558d6e8f633bb732024375167019a3ae477e7ba240ab"
+      sha256 "9d97d522b2e23fa005ad0668c21061723d1cf2a5967da7d23ed336450ee924d3"
 
       def install
         bin.install "kubectl-testkube"
@@ -38,7 +38,7 @@ class Testkube < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kubeshop/testkube/releases/download/2.4.0/testkube_2.4.0_Linux_x86_64.tar.gz"
-        sha256 "0e0cbbcc462442dbde4be58781eca2ea476d0ace1bbbb5f85f98d9e3c27ae6e5"
+        sha256 "e166d16ba629b37f131eaac884bf19a0c6b2cc3e571d3f6011fdaa1fa3b35740"
 
         def install
           bin.install "kubectl-testkube"
@@ -50,7 +50,7 @@ class Testkube < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kubeshop/testkube/releases/download/2.4.0/testkube_2.4.0_Linux_arm64.tar.gz"
-        sha256 "43327531c6f5bd42c6eb8831deff828b11a08ae153090bc5429f59e4dc664066"
+        sha256 "86a741a80d81de10d318693d50c2cc6b17f2a047be24b40c4fffc8057543d2ea"
 
         def install
           bin.install "kubectl-testkube"
